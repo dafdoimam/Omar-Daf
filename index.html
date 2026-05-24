@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#1a2744"/>
+  <title>Omar Daf — Bureau d'achat or diamant</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="manifest" href="manifest.json"/>
+</head>
+<body>
+
+  <!-- EN-TÊTE -->
+  <header>
+    <div class="header-top">
+      <div class="logo">
+        <span class="logo-icon">⬡</span>
+        <div>
+          <div class="logo-title">OMAR DAF</div>
+          <div class="logo-sub">Bureau d'achat or & diamant</div>
+        </div>
+      </div>
+      <button id="btnRefresh" onclick="refreshAll()">
+        ⟳ Actualiser
+      </button>
+    </div>
+    <div id="lastUpdate">Dernière mise à jour : —</div>
+  </header>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main>
+
+    <!-- SECTION MÉTAUX -->
+    <section>
+      <div class="section-title">⬡ MÉTAUX PRÉCIEUX</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Métal</th>
+            <th>USD/oz</th>
+            <th>FCFA/oz</th>
+            <th>Var.</th>
+          </tr>
+        </thead>
+        <tbody id="metalsTable">
+          <tr><td colspan="4" class="loading">Appuyez sur Actualiser</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- SECTION DEVISES -->
+    <section>
+      <div class="section-title">💱 TAUX DE CHANGE</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Devise</th>
+            <th>Taux</th>
+            <th>En FCFA</th>
+            <th>Var.</th>
+          </tr>
+        </thead>
+        <tbody id="forexTable">
+          <tr><td colspan="4" class="loading">Appuyez sur Actualiser</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- SECTION CRYPTO -->
+    <section>
+      <div class="section-title">₿ CRYPTOMONNAIES</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Crypto</th>
+            <th>Prix USD</th>
+            <th>En FCFA</th>
+            <th>Var. 24h</th>
+          </tr>
+        </thead>
+        <tbody id="cryptoTable">
+          <tr><td colspan="4" class="loading">Appuyez sur Actualiser</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <!-- PIED DE PAGE -->
+  <footer>
+    <div>Omar Daf — Bureau d'achat or & diamant</div>
+    <div>Données à titre indicatif uniquement</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
